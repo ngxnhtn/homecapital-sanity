@@ -131,7 +131,7 @@ export default defineType({
           title: "Bedrooms",
           type: "number",
           description: "Số phòng ngủ",
-
+          hidden: true,
           deprecated: {
             reason: "Đổi qua số phòng",
           },
@@ -141,7 +141,7 @@ export default defineType({
           title: "Bathrooms",
           type: "number",
           description: "Số phòng tắm",
-
+          hidden: true,
           deprecated: {
             reason: "Đổi qua số phòng",
           },
@@ -150,15 +150,23 @@ export default defineType({
       options: { columns: 2 },
     }),
     defineField({
-      name: "amenities",
-      title: "Amenities",
+      name: "features",
+      title: "Features",
       type: "array",
       description: "Danh sách tiện ích (Ví dụ: Garage, Vườn, AC,...)",
       of: [
         defineArrayMember({
           type: "object",
-          name: "amenity",
+          name: "feature",
           fields: [
+            defineField({
+              name: "icon",
+              type: "iconPicker",
+              title: "Icon",
+              options: {
+                providers: ["fa"],
+              },
+            }),
             defineField({
               name: "en",
               title: "English",

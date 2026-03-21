@@ -20,12 +20,14 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "sanity": "^5.17.1",
+    "sanity-plugin-icon-picker": "^4.0.0",
     "sanity-plugin-internationalized-array": "^5.0.3",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^6.0.0",
     "@types/react": "^19.2.14",
+    "dotenv": "^17.3.1",
     "eslint": "^9.28",
     "prettier": "^3.5",
     "typescript": "^5.8"

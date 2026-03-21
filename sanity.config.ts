@@ -3,17 +3,19 @@ import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemaTypes";
 import { internationalizedArray } from "sanity-plugin-internationalized-array";
+import { iconPicker } from "sanity-plugin-icon-picker";
 
 export default defineConfig({
   name: "default",
   title: "real estate",
 
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
+  projectId: "7pox372f",
+  dataset: "production",
 
   plugins: [
     structureTool(),
     visionTool(),
+    iconPicker(),
     internationalizedArray({
       languages: [
         { id: "en", title: "English" },
